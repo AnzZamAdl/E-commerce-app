@@ -20,12 +20,11 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 
-                '''
+                sh """
                 npm install
                 npm list @testing-library/jest-dom
                 npm list vitest
-                '''
+                """
             }
         }
 
