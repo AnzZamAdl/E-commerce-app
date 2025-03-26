@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'nodejs'
+    }
+
     environment {
         IMAGE_NAME = 'anzzamadl/ecommerce-app'
         CONTAINER_NAME = 'ecommerce-container'
