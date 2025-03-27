@@ -18,16 +18,6 @@ pipeline {
             }
         }
 
-        stage('Remove dependencies'){
-            steps{
-                sh """
-                rm -rf node_modules package-lock.json
-                npm cache clean --force
-                npm install
-                """
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh """
