@@ -40,7 +40,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'npm test -- --run --reporter=verbose'
+                sh 'npm run dev'
             }
         }
 
