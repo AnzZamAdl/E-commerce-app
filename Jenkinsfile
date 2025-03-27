@@ -44,7 +44,11 @@ pipeline {
             steps {
               script{
                 withDockerRegistry(credentialsId: 'docker-login', toolName: 'docker') {
-                  sh 'docker build -t ${IMAGE_NAME} .'
+                  sh """
+                    docker build -t ${IMAGE_NAME} .
+                    docker tag ${IMAGE_NAME} ${IMAGE_NAME}:latest
+                    docker push ${IMAGE_NAME}:latest
+                    """
                 }
               }
             }
