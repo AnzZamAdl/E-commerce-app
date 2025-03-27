@@ -6,7 +6,7 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: './src/__tests__/setup.ts', // Ensure correct path
-    environment: 'node', // Needed for React testing
+    environment: 'jsdom', // Needed for React testing
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
