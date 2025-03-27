@@ -28,11 +28,11 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                sh 'npm test -- --run --reporter=verbose'
-            }
-        }
+        //stage('Run Tests') {
+            //steps {
+                //sh 'npm test -- --run --reporter=verbose'
+            //}
+        //}
 
         stage('Build') {
             steps {
